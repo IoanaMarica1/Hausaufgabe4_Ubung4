@@ -27,4 +27,25 @@ public class ElektronikShop {
         }
         return max;
     }
+    public int teuersterUSBMitBudget(int budget){
+        int maxUSB=0;
+        for(int preis:usb){
+            if(preis<=budget && preis>maxUSB){
+                maxUSB=preis;
+            }
+        }
+        return maxUSB;
+    }
+    public int maxAusgabeMitBudget(int budget){
+        int maxSumme=0;
+        for(int t:tastaturen){
+            for(int u:usb){
+                int summe=t+u;
+                if(summe<=budget && summe>maxSumme){
+                    maxSumme=summe;
+                }
+            }
+        }
+        return maxSumme;
+    }
 }

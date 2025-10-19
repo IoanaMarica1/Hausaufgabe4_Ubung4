@@ -1,13 +1,14 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+public class Main {
+    public static void main(String[] args) {
+        int[] tastaturen = {40, 50, 60};
+        int[] usb = {8, 12};
+        int budget = 60;
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+        ElektronikShop shop = new ElektronikShop(tastaturen, usb);
+
+        System.out.println("Gunstigste Tastatur: " + shop.gunstigsteTastatur());
+        System.out.println("Teuerstes Produkt: " + shop.teuerstesProdukt());
+        System.out.println("Teuerster USB mit Budget: " + shop.teuersterUSBMitBudget(budget));
+        System.out.println("Maximale Ausgabe mit Budget: " + shop.maxAusgabeMitBudget(budget));
     }
 }
